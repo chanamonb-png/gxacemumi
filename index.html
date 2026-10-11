@@ -1,0 +1,74 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สมุดบัญชีของฉัน</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>สมุดบัญชีของฉัน</h1>
+
+    <!-- กล่องสรุป -->
+    <div class="summary-boxes">
+      <div class="summary-card">
+        <p>รายรับรวม</p>
+        <span id="totalIncome" class="income-color">0.00</span>
+      </div>
+      <div class="summary-card">
+        <p>รายจ่ายรวม</p>
+        <span id="totalExpense" class="expense-color">0.00</span>
+      </div>
+      <div class="summary-card">
+        <p>คงเหลือ</p>
+        <span id="balance">0.00</span>
+      </div>
+    </div>
+
+    <!-- ฟอร์ม -->
+    <div class="form-card">
+      <div class="form-group">
+        <label for="description">รายละเอียด</label>
+        <input type="text" id="description" placeholder="เช่น เงินเดือน, ค่าข้าว">
+      </div>
+      <div class="form-group">
+        <label for="amount">จำนวนเงิน</label>
+        <input type="number" id="amount" placeholder="0.00" min="0.01" step="0.01">
+      </div>
+      <div class="form-group">
+        <label for="type">ประเภท</label>
+        <select id="type">
+          <option value="income">รายรับ</option>
+          <option value="expense">รายจ่าย</option>
+        </select>
+      </div>
+      <button id="addBtn">บันทึก</button>
+    </div>
+
+    <!-- ปุ่มกรอง -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+      <button class="filter-btn" data-filter="income">เฉพาะรายรับ</button>
+      <button class="filter-btn" data-filter="expense">เฉพาะรายจ่าย</button>
+    </div>
+
+    <!-- รายการ -->
+    <table id="transactionTable">
+      <thead>
+        <tr>
+          <th>รายละเอียด</th>
+          <th>จำนวนเงิน</th>
+          <th>วันที่/เวลา</th>
+          <th>จัดการ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- แถวจะถูกสร้างด้วย JS -->
+      </tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

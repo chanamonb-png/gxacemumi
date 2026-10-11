@@ -1,0 +1,193 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e8f5e9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 700px;
+  width: 100%;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+ color: #2e7d32;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.summary-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-card {
+  flex: 1;
+  background: #f1f8e9;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.summary-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.summary-card span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.income-color { color: #2e7d32; }
+.expense-color { color: #c62828; }
+#balance { color: #2e7d32; }
+#balance.negative { color: #c62828; }
+
+.form-card {
+  background: #f9fbe7;
+  padding: 1.2rem;
+  borde-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-group {
+  flex: 1 1 200px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #33691e;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #c8e6c9;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #66bb6a;
+  box-shadow: 0 0 0 2px rgba(102,187,106,0.3);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+#addBtn {
+  background: #43a047;
+  color: white;
+  flex: 0 0 auto;
+  align-self: flex-end;
+}
+
+#addBtn:hover {
+  background: #2e7d32;
+}
+
+.filter-bar {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: #a5d6a7;
+  color: #1b5e20;
+  padding: 0.4rem 1rem;
+}
+
+.filter-btn.active {
+  background: #2e7d32;
+  color: white;
+}
+
+.filter-btn:hover {
+  background: #66bb6a;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  backgroound: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #2e7d32;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: #f1f8e9;
+}
+
+.text-income {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.text-expense {
+  color: #c62828;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: #ef5350;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background: #c62828;
+}
